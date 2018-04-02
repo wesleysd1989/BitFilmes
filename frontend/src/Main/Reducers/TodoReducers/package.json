@@ -1,0 +1,6 @@
+{
+  "name": "TodoReducer",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./TodoReducer.js"
+}
