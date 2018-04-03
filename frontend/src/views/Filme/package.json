@@ -1,0 +1,6 @@
+{
+  "name": "Filme",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Filme.jsx"
+}
