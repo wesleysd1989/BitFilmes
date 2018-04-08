@@ -39,6 +39,7 @@ body {
 .card-header {
     border-top: none;
     border-radius: 0;
+    border-bottom: none
 }
 
 .image {
@@ -81,4 +82,13 @@ body {
 .menuClass {
     background-color: #1F1F1F;
     padding: 15px;
+}
+
+.table-secondary
+{
+    background-color: #1F1F1F;
+}
+
+.table-bordered thead th, .table-bordered thead td{
+    border-bottom-width: 0px;
 }
