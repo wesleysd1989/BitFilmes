@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import {Button} from 'reactstrap';
+import { Link } from 'react-router-dom'
 
 import IconButton from '../IconButton/'
 import { markAsDone, markAsPending, remove } from '../../Main/Actions/'
@@ -9,14 +10,14 @@ import { markAsDone, markAsPending, remove } from '../../Main/Actions/'
 const TodoList = props => {
 
     const renderRows = () => {
-        const list = props.list || []
+        const list = props.list || []        
         return list.map(todo => (
             <div className="mx-2 my-2"  id={todo._id} key={todo._id} style={{boxShadow: '0 0 #000000'}}>
                 <div className={todo.done ? 'markedAsDone' : ''}>
                     <div className="card border-0 special-card" style={{width: '8rem'}}>
                         <img className="card-img-top rounded-0 image"  src={todo.linkCapa} alt={todo._id} />
                         <div className="middle">
-                        <Button style={{ backgroundColor: '#6FB914'}}><i className="fa fa-eye"></i>&nbsp; Assistir</Button>
+                        <Button style={{ backgroundColor: '#6FB914'}}><Link to={`/filme/${todo._id}`} params={{filmeId: todo._id}} style={{ textDecoration: 'none', color: 'grey' }}><i className="fa fa-eye"></i> Assistir</Link></Button>
                         </div>
                         <div className="special-card" style={{ height: '40px'}}>
                             <small className="text-white" style={{ fontSize: 11 }}>{todo.titulo}</small>

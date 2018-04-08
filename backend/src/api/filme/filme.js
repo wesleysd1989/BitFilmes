@@ -17,6 +17,7 @@ const filmeSchema = new mongoose.Schema({
     sinopse: { type: String, required: true },
     linkTrailer: { type: String, required: true },
     linkCapa: { type: String, required: true },
+    linkThumbnail: { type: String, required: true },
     linkPlayer: { type: String, required: true },
     elenco: [elencoSchema],
     genero: [generoSchema],

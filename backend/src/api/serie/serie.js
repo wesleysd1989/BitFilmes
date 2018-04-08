@@ -27,6 +27,7 @@ const serieSchema = new mongoose.Schema({
     sinopse: { type: String, required: true },
     linkTrailer: { type: String, required: true },
     linkCapa: { type: String, required: true },
+    linkThumbnail: { type: String, required: true },
     temporada: [temporadaSchema],
     elenco: [elencoSchema],
     genero: [generoSchema],

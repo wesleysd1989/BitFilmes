@@ -10,18 +10,22 @@ class Filmes extends Component {
         this.state = { filme: [] }
     }
     componentDidMount() {
-        axios.get(`${URL}?sort=-createdAt`)
+        const { match: {params}} = this.props
+        axios.get(`${URL}/${params.filmeId}`)
             .then(res => {
                 const filme = res.data;
-                this.setState({ filme });
-            })
+                this.setState({ filme });                
+            }) 
     }
-    render() {
-        return (
-            <div  >
-                {this.state.filme.map(filme => <li key={filme._id} style={{ color:'grey'}}>{filme.titulo}</li>)}
-            </div>
 
+    render() {
+        const filme = this.state.filme             
+        return (
+            <div>                
+                <a style={{ color:'grey'}} >{filme.titulo}</a>  
+                <br/>
+                <a style={{ color:'grey'}} >{filme._id}</a>                
+            </div>
         )
     }
 }

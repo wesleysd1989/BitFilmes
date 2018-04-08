@@ -8,7 +8,7 @@ import Footer from '../../components/Footer/';
 import Dashboard from '../../views/Dashboard/';
 
 // Filmes
-import Filmes from '../../views/Filme/'
+import Filme from '../../views/Filme/'
 
 class Full extends Component {
   render() {
@@ -20,7 +20,7 @@ class Full extends Component {
             <Container fluid>
               <Switch>
                 <Route path="/dashboard" name="Dashboard" component={Dashboard}/>
-                <Route path="/filme" name="filme" component={Filmes}/>
+                <Route path="/filme/:filmeId" component={Filme} />
                 <Redirect from="/" to="/dashboard"/>
               </Switch>
             </Container>
